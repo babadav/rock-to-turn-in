@@ -1,0 +1,1414 @@
+html, body{
+
+	width: 100%;
+	box-sizing: border-box;
+	background-color: #140403;
+	color: white;
+	font-family: din-2014, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+
+}
+
+*{
+	font-family: din-2014, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.hide{
+	transition: all 1s;
+	visibility: hidden;
+
+
+}
+
+.page-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+}
+	nav{
+		width: 100%;
+		display: flex;
+		position: fixed;
+		top: 0;
+		z-index: 100;
+		color: white;
+
+		.logo{
+			padding-top: 30px;
+			img{
+				width: 40%;
+			}
+		}
+
+		.the-best-text{
+			padding-top: 32px;
+			padding-right: 20px;
+			padding-bottom:10px;
+		}
+	}
+
+	.band-drop-down{
+		width: 100%;
+		padding-bottom: 1233px;
+		position: relative;
+		background-image: url(../../assets/img/plane.png);
+		background-size: contain;
+		position: fixed;
+		background-repeat: no-repeat;
+		transition: all .8s;
+		filter: blur(15px);
+
+				&.loaded{
+				filter: blur(0px);
+
+			}
+
+
+		h1{
+			font-size: 60px;
+    		text-align: center;
+		}
+
+		.band-name{
+			position: relative;
+    		top: 70px;
+
+
+    		.led{
+    			position: relative;
+    			visibility: hidden;
+    		}
+
+    		.zeppelin{
+    			position: relative;
+    			visibility: hidden;
+    		}
+		}
+	}
+
+	.band-name-banner{
+    			position: relative;
+    			top: 40px;
+    			transition: .8s all;
+ 	  			opacity: 0;
+    			z-index: 1000;
+    			padding-bottom: 300px;
+
+    			&:hover{
+    				opacity: 1;
+    			}
+
+    			img{
+    				width: 100%;
+    			}
+    		}
+
+	.media-player{
+		width: 90%;
+		height: 60px;
+		background-color: RGBA(40, 40, 40, 1.00);
+		position: fixed;
+		bottom: 10px;
+		z-index: 100;
+		margin-left: 5%;
+		margin-bottom: 2%;
+		display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    text-align: center;
+	    justify-content: space-around;
+	    font-size: .8em;
+
+	    .spotify-logo{
+	    	position: absolute;
+	    	right: 10px;
+	    	width: 9%;
+	    	img{
+	    		width: 100%;
+	    	}
+	    }
+
+
+
+		.song-title{
+			position: relative;
+			top: 5px;
+			font-family: 'Montserrat', sans-serif;
+			font-family: 'Montserrat Alternates Medium Italic', sans-serif;
+			}
+
+		.artist-album{
+			position: relative;
+
+			h1{
+				color: RGBA(195, 195, 195, 1.00);
+			}
+		}
+
+	}
+
+	.text-block-1{
+		width: 100%;
+		padding-bottom: 100vh;
+		position: relative;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+
+		.description-text{
+			font-size: 61px;
+			line-height: 1.5;
+			padding-top: 370px;
+			text-align: center;
+			position: absolute;
+    		color: #FEFDFC;
+
+		}
+	}
+
+	.text-block-2{
+		width: 100%;
+		padding-bottom: 1500px;
+
+		position: relative;
+		text-align: center;
+		font-size: 61px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		line-height: 1.2;
+
+		h1{
+			position: relative;
+			top: 225px;
+			color: #FEFDFC;
+		}
+		
+	}
+
+	.text-block-3{
+		width: 100%;
+		padding-bottom: 700px;
+		position: relative;
+		text-align: center;
+		font-size: 40px;
+
+		h1{
+			position: relative;
+			top: 225px;
+		}
+	}
+
+	.text-block-4{
+		width: 100%;
+		position: relative;
+		font-size: 40px;
+		background-color: #140403;
+		background-image: url(../../assets/img/led-zeppelin.png);
+		background-size: cover;
+    	padding-bottom: 100vh;
+    	background-repeat: no-repeat;
+    	background-position: center;
+
+		img{
+			width: 100%;
+		}
+
+		.robert{
+			display: none;
+
+		}
+
+		.jimmy{
+			display: none;
+		}
+
+		.tb4-text{
+			position: absolute;
+		    top: 30%;
+		    left: 50%;
+		    transform: translate(-50%,-50%);
+		    width: 90%;
+		    text-align: center;
+			
+			h3{
+				font-size: 60px;
+    			position: relative;
+   				color: white;
+			}
+			
+
+			h1{
+				position: relative;
+				top: 25px;
+				font-size: 51px;
+				color: white;
+			}
+
+		}
+		
+	}
+
+	.timeline-container{
+			display: flex;
+			width: 100%;
+			position: relative;
+			background-color: #140403;
+			.years{
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
+				flex-direction: column;
+				position: relative;
+				color: black;
+
+
+					p{
+						font-size: 60px;
+						text-align: right;
+						position: relative;
+						color: black;
+						z-index: 10;
+
+					}
+   
+				
+
+				.year{
+					// transform: rotate(270deg);
+					font-size: 30px;
+					height: 200px;
+					transition: all .8s;
+					color: black;
+
+					&:hover{
+
+						padding-bottom: 400px;
+					}
+
+
+				}
+
+				.y1966{
+					background-color: RGBA(71, 21, 59, 1.00);
+					background-image:url(../../assets/img/timeline-1966.png);
+					background-repeat: no-repeat;
+					width: 100%;
+					
+				}
+
+				.y1968{
+					background-color: RGBA(97, 28, 55, 1.00);
+					background-image:url(../../assets/img/timeline-1968.png);
+					background-repeat: no-repeat;
+
+					
+				}
+
+				.y1973{
+					background-image:url(../../assets/img/timeline-1973.png);
+					background-repeat: no-repeat;
+					background-color: RGBA(125, 11, 38, 1.00);
+    				background-position-y: -30px;
+
+					
+
+				}
+
+				.y1975{
+					background-color: RGBA(161, 48, 50, 1.00);
+					background-image:url(../../assets/img/timeline-1975.png);
+					background-repeat: no-repeat;
+					background-position-y: -20px;
+				}
+
+				.y1976{
+					background-color: RGBA(194, 80, 60, 1.00);
+					background-image:url(../../assets/img/timeline-1976.png);
+					background-repeat: no-repeat;
+					background-position-y: -20px;
+				}
+
+				.y1980{
+					background-color: RGBA(214, 113, 61, 1.00);
+					background-image:url(../../assets/img/timeline-1980.png);
+					background-repeat: no-repeat;
+				}
+
+				.y1982{
+					background-color: RGBA(220, 144, 72, 1.00);
+					background-image:url(../../assets/img/timeline-1982.png);
+					background-repeat-y: no-repeat;
+					background-position-x: -400px;
+				}
+
+				.y1988{
+					background-color: RGBA(224, 168, 80, 1.00);
+					background-image:url(../../assets/img/timeline-1988.png);
+					background-repeat: no-repeat;
+				}
+
+				.y1994{
+					background-color: RGBA(242, 202, 96, 1.00);
+					background-image:url(../../assets/img/timeline-1994.png);
+					background-repeat: no-repeat;
+					background-position-x: -20px;
+
+				}
+
+
+			}
+
+			.through-the-years-title{
+				position: relative;
+				top: 40px;
+				font-size: 40px;
+			}
+		}
+
+		.merch-sales-slider{
+			height: 0;
+			width: 100%;
+		    padding-bottom: 383%;
+		    background-image: url(../../assets/img/merch-background-2.png);
+		    opacity: 1;
+		    position: relative;
+		    background-color: RGB(121, 120, 118);
+		    background-position-y: 609px;
+		    background-size: cover;
+		    background-position-y: 2%;
+			overflow: hidden;
+
+		
+
+			.merch-title{
+
+				h1{
+				position: relative;
+				top: 60px;
+				font-size: 60px;
+				color: RGB(247, 201, 71);
+				padding-left: 4%;
+
+				}
+				
+			}
+
+			.slider{
+				display: flex;
+				justify-content: space-around;
+				position: relative;
+    			top: 250px;
+
+    			.right-arrow{
+    				width: 10%;
+    				position: absolute;
+    				right: 0px;
+
+    				img{
+    					width: 100%;
+    				}
+    			}
+
+    			.left-arrow{
+    				width: 10%;
+    				position: absolute;
+    				left: 0;
+
+    				img{
+    					width: 100%;
+    				}
+    			}
+				.mi-wrap{
+					.merch-details{
+						visibility: hidden;
+					}
+				
+				.splatter-2{
+					position: absolute;
+  					left: 110%;
+				}
+
+				.splatter-3{
+				   	position: absolute;
+    				left: 110%;
+				    }
+
+    			.splatter{
+    				background-image: url(../../assets/img/splatter-sweatshirt.png);
+    				    position: absolute;
+				    width: 90%;
+				    padding-bottom: 297px;
+				    height: 0;
+				    background-size: cover;
+				    background-position-y: -184;
+				    background-repeat: no-repeat;
+				    /* top: -11%; */
+				    left: 50%;
+				    transform: translate(-50%,-50%);
+
+    				.mi-1{
+					width: 70%;
+					max-width: 70%;
+					position: absolute;
+				    top: 131%;
+				    right: 0;
+				    left: 58%;
+				    transform: translate(-50%,-50%);
+
+
+
+				    
+
+				    
+
+					img{
+						width: 100%;
+					    position: relative;
+					    bottom: 159px;
+					    left: -29px;
+
+					}
+				}
+
+    		}
+				
+		}
+	}
+}
+
+		.custom-mix-container{
+			position: absolute;
+			top: 43%;
+			width: 100%;
+			
+			.download-now, .custom-mix-media-player{
+				visibility: hidden;
+			}
+
+			.custom-mix-title{
+				width: 85%;
+				position: absolute;
+			    top: 137%;
+			    left: 25%;
+			    transform: translate(-11%, -50%);
+			    font-size: 59px;
+			}
+
+			.custom-mix-text{
+				position: absolute;
+				top: 164%;
+    			left: 28%;
+    			transform: translate(-18%, -50%);
+			    font-size: 20px;
+			    text-align: center;
+			}
+
+			.album-grid{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				position: relative;
+    			top: 80px;
+
+    			.album-1{
+    				width: 30%;
+
+    				img{
+    					width: 100%;
+    				}
+    			}
+
+    			.album-2{
+    				width: 30%;
+    				position: relative;
+    				right: 110px;
+    				top: 30px;
+
+    				img{
+    					width: 100%;
+    				}
+    			}
+
+    			.album-3{
+    				width: 30%;
+    				position: relative;
+				    right: 207px;
+				    top: 57px;
+
+    				img{
+    					width: 100%;
+    				}
+    			}
+
+    			.album-4{
+    				width: 30%;
+				    position: relative;
+				    right: -96px;
+				    top: -28px;
+
+    				img{
+    					width: 100%;
+    				}
+    			}
+
+    			.album-5{
+    				width: 30%;
+    				width: 30%;
+				    position: relative;
+				    right: -15px;
+				    top: 14px;
+
+    				img{
+    					width: 100%;
+    				}
+    			}
+
+    			.album-6{
+    				width: 30%;
+				    position: relative;
+				    right: 62px;
+				    top: 52px;
+
+    				img{
+    					width: 100%;
+    				}
+    			}
+			
+
+			}
+
+		}
+
+	.social-container{
+		width: 100%;
+		padding-bottom: 800px;
+		background-image: url(../../assets/img/backgrounds/share-the-love.png);
+		position: relative;
+		background-position-y: 4px;
+		background-size: cover;
+		padding-bottom: 931px;
+
+		.social-container-title-desktop{
+			visibility: hidden;
+		}
+
+		.social-form-container{
+			visibility: hidden;
+		}
+
+		.posted-container{
+			visibility: hidden;
+		}
+
+
+
+
+		.social-container-title{
+			text-align: center;
+		    position: relative;
+		    top: 152px;
+		    font-size: 58px;
+    		position: relative;
+    		line-height: 1.3
+		}
+
+		.subscribe-text{
+			position: relative;
+			text-align: center;
+			top: 230px;
+			font-size: 23px;
+		}
+
+		.social-icons{
+			display: flex;
+			justify-content: center;
+			position: relative;
+			top: 300px;
+
+			.icon{
+				margin-right: 20px;
+
+				img{
+					width: 70%;
+				}
+			}
+		}
+
+		.more-container{
+			position: relative;
+			top: 420px;
+			text-align: center;
+
+			h4{
+				font-size: 11px;
+			}
+		}
+
+		.band-arrow-container{
+			position: absolute;
+		    display: flex;
+		    left: 50%;
+		    bottom: 34%;
+		    transform: translate(-50%,-50%);
+		    width: 100%;
+		    justify-content: space-around;
+		    align-items: flex-end;
+
+
+
+		    .left-arrow-white, .right-arrow-white{
+				width: 8%;
+				font-size: 12px
+			
+		    	img{
+		    		width: 100%;
+		    	
+		    	}
+
+		    }
+
+		    .right-arrow-white
+		    	img{
+		    		width: 100%;
+		    	}
+
+		    .left-arrow-white{
+		    	margin-right: 10px;
+
+		    	img{
+		    		width: 100%;
+		    	}
+		    }
+		}
+	}
+
+@media screen and (min-width: 766px){
+	
+	nav{
+		.logo{
+			width: 50%;
+		}
+
+		.the-best-text{
+			position: absolute;
+			left: 80%;
+			padding-top: 2.5%;
+
+			img{
+				width: 190%;
+			}
+
+		}
+	}
+
+	.scroll-animation{
+
+		position: absolute;
+	    bottom: 0;
+	    width: 10%;
+	    height: 10%;
+	    transform: translate(430%,-50%);
+		
+		.scroll-bar-1-top{
+			position: absolute;
+		    width: 60%;
+		    background: white;
+		    height: 4px;
+		    left: 25%;
+			
+		
+		}
+		.scroll-bar-2{
+			position: absolute;
+		    width: 50%;
+		    background: white;
+		    height: 4px;
+		    left: 30%;
+		    top: 30%;
+		}
+		.scroll-bar-3{
+			position: absolute;
+		    width: 40%;
+		    background: white;
+		    height: 4px;
+		    left: 35%;
+		    top: 60%;
+		}
+		.scroll-bar-4{
+			position: absolute;
+		    width: 30%;
+		    background: white;
+		    height: 4px;
+		    left: 40%;
+		    top: 90%;
+		}
+		.scroll-bar-5-bottom{
+		    position: absolute;
+		    width: 20%;
+		    background: white;
+		    height: 4px;
+		    left: 45%;
+		    top: 120%;
+			
+
+		}
+	}
+
+	.band-drop-down{
+		background-image: url(../../assets/img/landing-2.png);
+			transition: .8s;
+			filter: blur(10px);
+			background-attachment: fixed;
+    		background-size: cover;
+    		background-position: center;
+				
+				&.loaded{
+				filter: blur(0px);
+
+			}
+
+	}
+	.band-name-banner{
+				left: 48%;
+			    top: 50%;
+			    transform: translate(-50%,17%);
+			    padding-bottom: 100vh;
+			}
+
+	.media-player{
+		top: 2%;
+		width: 30vw;
+		left: 30%;
+		opacity: .75;
+    	border: 2px solid white;
+	}
+
+	.text-block-1{
+		.description-text{
+			width: 100%;
+
+			h2{
+				font-size: 12vw;
+
+				.tb1-left-animation{
+
+					position: absolute;
+				    left: -88%;
+				    top: 124%;
+
+				    
+
+				}
+
+				.tb1-right-animation{
+						width: 100%;
+					    position: absolute;
+					    right: -70%;
+					    top: 180%;
+					
+
+				}
+			}
+		}
+	}
+
+	.text-block-2{
+
+		h1{
+				font-size: 12vw;
+
+				.tb2-left-animation{
+					
+					position: relative;
+				    left: -88%;
+				    top: 124%;
+
+				    
+
+				}
+
+				.tb2-right-animation{
+						width: 100%;
+					    position: absolute;
+					    right: -100%;
+					    top: 180%;
+					
+
+				}
+			}
+	}
+
+	.text-block-4{
+		background-position: center;
+		padding-bottom: 95%;
+		overflow: hidden;
+
+		.robert{
+			display: block;
+			position: absolute;
+		    bottom: 1%;
+		    width: 129%;
+		    left: -17.4444%;
+		    z-index: 10000;
+
+		}
+
+		.jimmy{
+			display: block;
+			position: absolute;
+		    bottom: 0;
+		    width: 133%;
+		    left: -18%;
+		}
+
+
+		.tb4-text{
+			bottom: 0;
+			top: 50%;
+			position: absolute;
+
+			h3{
+				position: absolute;
+				top: 119%;
+    			right: -37%;
+				font-size: 12vw;
+			}
+
+			h1{
+				position: absolute;
+				left: -100%;
+				top: 100%;
+				font-size: 14vw;
+				width: 100%;
+			}
+		}
+	}
+
+	.timeline-container{
+		overflow: hidden;
+		.years{
+			width: 200%;
+			flex-direction: row;
+			justify-content: normal;
+
+
+
+			.year{
+					position: relative;
+				    width: 24.7%;
+    				padding-bottom: 40%;
+    				transition: all .8s;
+
+    				
+
+    				&:hover{
+					
+						padding-bottom:40%;
+						transform: scale(1.2);
+
+					}
+
+					p{
+						transform: rotate(-90deg);
+					    font-size: 132px;
+					    bottom: 13%;
+					    position: absolute;
+
+					    	&:hover{
+					    		color: pink;
+					    	}
+
+					    
+					}
+			}
+
+			.year-active{
+
+				padding-right: 25%;;
+				padding-bottom: 40%;
+				
+					&:hover{
+						transform: scale(1);
+
+					}
+			}
+
+			.y1966{
+					background-color: RGBA(71, 21, 59, 1.00);
+					background-image:url(../../assets/img/timeline-1966-vert.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+					z-index: 1;
+
+					
+				}
+
+				.y1968{
+					background-color: RGBA(97, 28, 55, 1.00);
+					background-image:url(../../assets/img/timeline-1968-vert.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+					z-index: 2;
+
+					
+				}
+
+				.y1973{
+					background-image:url(../../assets/img/timeline-1973-vert.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+					z-index: 3;
+
+					
+
+				}
+
+				.y1975{
+					background-color: RGBA(161, 48, 50, 1.00);
+					background-image:url(../../assets/img/timeline-1975-vert.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+					z-index: 4;
+				}
+
+				.y1976{
+					background-color: RGBA(194, 80, 60, 1.00);
+					background-image:url(../../assets/img/timeline-1976-vert.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+					z-index: 5;
+				}
+
+				.y1980{
+					background-color: RGBA(214, 113, 61, 1.00);
+					background-image:url(../../assets/img/timeline-1980-vert.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+					z-index: 6;
+				}
+
+				.y1982{
+					background-color: RGBA(220, 144, 72, 1.00);
+					background-image:url(../../assets/img/timeline-1982-vert.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+					z-index: 7;
+					background-position-x: 0px;
+				}
+
+				.y1988{
+					background-color: RGBA(224, 168, 80, 1.00);
+					background-image:url(../../assets/img/timeline-1988-vert.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+					z-index: 8;
+				}
+
+				.y1994{
+					background-color: RGBA(242, 202, 96, 1.00);
+					background-image:url(../../assets/img/timeline-1994-vert.png);
+					background-repeat: no-repeat;
+					background-size: cover;
+					z-index: 9;
+					transition:.5s all;
+				}
+		}
+	}
+
+	.timeline-container .years .y1966.year-active {
+		background-image:none;
+		background-color:rgb(85,0,63);
+	}
+
+	.timeline-container .years .y1968.year-active {
+		background-image:none;
+		background-color: rgb(115,0,54);
+	}
+
+	.timeline-container .years .y1973.year-active {
+		background-image:none;
+		background-color: rgb(115,0,54);
+	}
+
+	.timeline-container .years .y1975.year-active {
+		background-image:none;
+		background-color: rgb(190,0,39);
+	}
+
+	.timeline-container .years .y1976.year-active {
+		background-image:none;
+		background-color: rgb(225,55,37);
+	}
+
+	.timeline-container .years .y1980.year-active {
+		background-image:none;
+		background-color: rgb(244,98,0);
+	}
+
+	.timeline-container .years .y1982.year-active {
+		background-image:none;
+		background-color: rgb(246,137,8);
+	}
+
+	.timeline-container .years .y1988.year-active {
+		background-image:none;
+		background-color: rgb(244,165,0);
+	}
+
+	.timeline-container .years .y1994.year-active {
+		background-image:none;
+		background-color: rgb(255,202,14);
+	}
+
+	.merch-sales-slider{
+		padding-bottom: 130%;
+
+		.merch-title{
+			h1{
+				margin-left: 2%;
+			}
+		}
+
+		.slider{
+			.right-arrow , .left-arrow{
+				visibility: hidden;
+			}
+			.mi-wrap{
+			.splatter{
+				width: 30%;
+				transform: translate(-144%, -50%);
+				.mi-1{
+					width: 56%;
+					top: 135%;
+
+					.merch-details{
+						visibility: visible;
+				    	position: absolute;
+					    top: 57%;
+					    left: 23%;
+					    text-align: center;
+					    line-height: 1.2;
+					    font-family: din-2014-black-itallic, sans-serif;
+					    font-weight: 5;
+
+					    h1{
+					    	font-size: 3vw;
+					    }
+
+					    h2{
+					    	font-family: din-2014, sans-serif;
+					    	font-size: 1.5rem;
+
+					    }
+				    }
+					
+				}
+			}
+
+			.splatter-2{
+				background-image: url(../../assets/img/splatter-sweatshirt.png);
+				position: absolute;
+			    width: 29%;
+			    padding-bottom: 20%;
+			    background-size: cover;
+			    background-position-y: -184;
+			    background-repeat: no-repeat;
+		        left: 62%;
+			    top: 64%;
+			    transform: translate(-73%,-29%);
+			    display: block;
+			
+
+				.mi-2{
+					position: absolute;
+					left: 35%;
+				    top: 28%;
+
+				    .merch-details{
+				    	visibility: visible;
+				    	position: absolute;
+					    top: 176%;
+					    left: 23%;
+					    text-align: center;
+					    line-height: 1.2;
+					    font-family: din-2014-black-itallic, sans-serif;
+					    font-weight: 5;
+
+					    h1{
+					    	font-size: 3vw;
+					    }
+
+					    h2{
+					    	font-family: din-2014, sans-serif;
+					    	font-size: 1.5rem;
+
+					    }
+
+
+				    }
+
+				}
+			}
+
+			.splatter-3{
+					display: block;
+				    background-image: url(../../assets/img/splatter-sweatshirt.png);
+				    position: absolute;
+				    width: 29%;
+				    padding-bottom: 21%;
+				    background-size: cover;
+				    background-position-y: -184;
+				    background-repeat: no-repeat;
+				    left: 92%;
+				    top: 64%;
+				    transform: translate(-73%, -29%);
+
+				    .mi-3{
+					position: absolute;
+					left: 26%;
+				    top: 28%;
+
+				    .merch-details{
+				    	visibility: visible;
+				    	position: absolute;
+					    top: 114%;
+					    left: 32%;
+					    text-align: center;
+					    line-height: 1.2;
+					    font-family: din-2014-black-itallic, sans-serif;
+					    font-weight: 5;
+
+					    h1{
+					    	font-size: 3vw;
+					    }
+
+					    h2{
+					    	font-family: din-2014, sans-serif;
+					    	font-size: 1.5rem;
+
+					    }
+				    }
+
+				}
+			}
+		}
+	}}
+
+
+	.custom-mix-container{
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+
+		.album-grid{
+
+			.album{
+				width: 15%;
+				position: absolute;
+
+			}
+
+			.album-1{
+				right: 3%;
+			    top: 50%;
+			    transform: translate(-50%,71%);
+			}
+
+			.album-2{
+				right: 31%;
+			    top: 50%;
+			    transform: translate(-50%,45%);
+			}
+
+			.album-3{
+				right: 3%;
+			    top: 50%;
+			    transform: translate(-50%,202%);
+			}
+
+			.album-4{
+				right: 35%;
+			    top: 50%;
+			    transform: translate(-50%,171%);
+			}
+
+			.album-5{
+				right: 21%;
+			    top: 50%;
+			    transform: translate(-50%,125%);
+			}
+
+
+
+			.album-6{
+				right: 13%;
+			    top: 50%;
+			    transform: translate(-50%,11%);
+			}
+		}
+
+		.custom-mix-title{
+			    transform: translate(-11%, 68%);
+			    left: 14%;
+			    font-size: 46px;
+		}
+
+		.custom-mix-text{
+			    left: 17%;
+			    transform: translate(-18%, 540%);
+
+			    p{
+			    	width: 58%;
+			    	text-align: left;
+			    }
+
+		}
+
+		.custom-mix-media-player{
+			visibility: visible;
+			width: 400px;
+			padding-bottom: 40px;
+			background-color: RGBA(40, 40, 40, 1.00);
+			position: absolute;
+		    left: 20%;
+		    transform: translate(-50%,682%);
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+
+		    // .custom-mix-media-title{
+		    // 	position: absolute;
+		    // 	left: 23%;
+			   //  top: 19%;
+			   //  width: 100%;
+		    // }
+
+		    // .custom-mix-media-text{
+		    // 	position: absolute;
+		    	
+		    // }
+
+		}
+
+		.download-now{
+			visibility: visible;
+			width: 100%;
+		    position: absolute;
+		    left: 20%;
+		    transform: translate(-50%, 1640%);
+		    font-size: 40px;
+		    text-decoration: underline;
+		    display: flex;
+    		justify-content: space-between;
+    		width: 20%;
+
+		}
+	}
+
+	.social-container{
+
+		padding-bottom: 200vh;
+		overflow: hidden;
+
+		.social-form-container{
+			width: 100%;
+	    	position: absolute;	
+		    bottom: 0;
+		    display: flex;
+		    visibility: visible;
+
+	    	.form-text{
+	    		width: 16%;
+	    		font-size: 20px;
+	    		bottom: 0;
+	    	}
+	    }
+
+	    .posted-container{
+		visibility: visible;
+		position: absolute;
+	    left: 39%;
+	    top: 75%;
+	    transform: translate(-35%, -50%);
+	    font-size: 15vw;
+	    width: 100%;
+	}
+
+		.social-form-inputs{
+			position: absolute;
+			right: 0;
+		}
+
+		.subscribe-text{
+		left: 50%;
+    	top: -62%;
+   		transform: translate(-50%,3200%);
+	}
+
+	.social-icons{
+		top: 41%;
+	    left: 51%;
+	    transform: translate(-50%,-50%);
+	    position: absolute;
+	    display: flex;
+	}
+
+		.more-container{
+			visibility: hidden;
+		}
+
+		.band-arrow-container{
+			visibility: hidden;
+		}
+	}
+
+	.social-container-title{
+		display: none;
+	}
+
+	.social-container-title-desktop{
+		width: 100%;
+	    position: absolute;
+	    left: 52%;
+	    top: 21%;
+	    transform: translate(-43%,-50%);
+	    font-size: 78px;
+	    display: flex;
+	    visibility: visible;
+
+	    h1{
+	    	span{
+	    		font-size: 60px;
+	    	}
+	    }
+	}
+
+
+
+
+}
+
+@media screen and (min-width: 1024px){
+// 	.custom-mix-container{
+// 		top: 59%;
+// 	}
+
+	.social-container{
+
+		.social-container-title-desktop{
+			visibility: visible;
+			font-size: 15vw;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+
+	
+// $(arrow).on('click', function() {
+// 	move left 
+// 	})
