@@ -10,19 +10,17 @@ setTimeout(function(){
 		$('.band-drop-down').addClass('loaded');
 	}, 1000);
 
-
-
-
-new Waypoint({
+if (window.innerWidth >= 768){
+  new Waypoint({
   element: document.querySelector('.text-block-1'),
   offset: "80%",
   handler: function(direction) {
     // console.log('Scrolled to waypoint!', direction)
     if (direction == "down") {
-    	// do animation
-    	TweenMax.to(".band-drop-down", 2, {
-			opacity: .6
-		})
+      // do animation
+      TweenMax.to(".band-drop-down", 2, {
+      opacity: .6
+    })
     }
   }
 });
@@ -33,10 +31,10 @@ new Waypoint({
   handler: function(direction) {
     // console.log('Scrolled to waypoint!', direction)
     if (direction == "down") {
-    	// do animation
-    	TweenMax.to(".band-drop-down", 2, {
-			opacity: .3
-		})
+      // do animation
+      TweenMax.to(".band-drop-down", 2, {
+      opacity: .3
+    })
     }
   }
 });
@@ -103,28 +101,52 @@ new Waypoint({
   }
 });
 
+}
+
+
+
+
 
 
 var yearContainer = document.querySelectorAll('.year');
-// console.log()
-// console.log(yearContainer);
+var yearTextContainer = document.querySelectorAll('.year-text');
+
 for (let i = 0; i < yearContainer.length; i++) {
 
-  // console.log(yearContainer[i])
+  
+
  yearContainer[i].addEventListener('click' , function(){
 
+  // const yearText = document.querySelectorAll('.year-text');
+
+
   
+
+
+
+  var yearText = document.querySelector("."+this.classList[0] +"> .year-text" );
  if (this.classList.contains('year-active')) {
+    
+    yearText.classList.remove('year-text-active');
 
     this.classList.remove('year-active');
- }else{
+ } else{
   for (let i = 0; i < yearContainer.length; i++) {
     if(yearContainer[i].classList.contains('year-active')) {
       yearContainer[i].classList.remove('year-active');
       // yearContainer[i].classList.remove('background');
     }
   }
+  for (let i = 0; i < yearTextContainer.length; i++) {
+    console.log(yearTextContainer[i].classList.contains('year-text-active'));
+    if(yearTextContainer[i].classList.contains('year-text-active')) {
+      yearTextContainer[i].classList.remove('year-text-active');
+      // yearContainer[i].classList.remove('background');
+    }
+  }
+  yearText.classList.add('year-text-active');
   this.classList.add('year-active');
+
  }
   });
 

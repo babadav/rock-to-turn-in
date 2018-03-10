@@ -287,6 +287,26 @@ html, body{
 						padding-bottom: 400px;
 					}
 
+					.year-text{
+						width: 90%;
+					    margin: 0 auto;
+					    color: white;
+					    z-index: 1;
+					    margin-top: 45%;
+					    font-size: 1.2rem;
+					    line-height: 2;
+					    opacity: 0;
+					    transition: all .8s;
+					    text-align: center;
+					    padding-left: 5%;
+					    padding-top: 3%;
+
+
+					    &.year-text-active{
+					    	opacity: 1;
+					    }
+					}
+
 
 				}
 
@@ -295,6 +315,8 @@ html, body{
 					background-image:url(../../assets/img/timeline-1966.png);
 					background-repeat: no-repeat;
 					width: 100%;
+
+					
 					
 				}
 
@@ -900,6 +922,7 @@ html, body{
 				    width: 24.7%;
     				padding-bottom: 40%;
     				transition: all .8s;
+    				background-position: center center;
 
     				
 
@@ -926,7 +949,7 @@ html, body{
 
 			.year-active{
 
-				padding-right: 25%;;
+				width: 100%;
 				padding-bottom: 40%;
 				
 					&:hover{
@@ -942,6 +965,12 @@ html, body{
 					background-size: cover;
 					z-index: 1;
 
+					.year-text{
+						
+						margin: 0 auto;
+						padding-top: 35%;
+					}
+
 					
 				}
 
@@ -952,7 +981,11 @@ html, body{
 					background-size: cover;
 					z-index: 2;
 
-					
+					.year-text{
+						margin: 0 auto;
+						padding-top: 35%;
+					}
+
 				}
 
 				.y1973{
@@ -961,8 +994,10 @@ html, body{
 					background-size: cover;
 					z-index: 3;
 
-					
-
+					.year-text{
+						margin: 0 auto;
+						padding-top: 35%;
+					}
 				}
 
 				.y1975{
@@ -971,6 +1006,11 @@ html, body{
 					background-repeat: no-repeat;
 					background-size: cover;
 					z-index: 4;
+
+					.year-text{
+						margin: 0 auto;
+						padding-top: 35%;
+					}
 				}
 
 				.y1976{
@@ -979,6 +1019,11 @@ html, body{
 					background-repeat: no-repeat;
 					background-size: cover;
 					z-index: 5;
+
+					.year-text{
+						margin: 0 auto;
+						padding-top: 35%;
+					}
 				}
 
 				.y1980{
@@ -987,6 +1032,11 @@ html, body{
 					background-repeat: no-repeat;
 					background-size: cover;
 					z-index: 6;
+
+					.year-text{
+						margin: 0 auto;
+						padding-top: 35%;
+					}
 				}
 
 				.y1982{
@@ -996,6 +1046,11 @@ html, body{
 					background-size: cover;
 					z-index: 7;
 					background-position-x: 0px;
+
+					.year-text{
+						margin: 0 auto;
+						padding-top: 35%;
+					}
 				}
 
 				.y1988{
@@ -1004,6 +1059,11 @@ html, body{
 					background-repeat: no-repeat;
 					background-size: cover;
 					z-index: 8;
+
+					.year-text{
+						margin: 0 auto;
+						padding-top: 35%;
+					}
 				}
 
 				.y1994{
@@ -1013,6 +1073,11 @@ html, body{
 					background-size: cover;
 					z-index: 9;
 					transition:.5s all;
+
+					.year-text{
+						margin: 0 auto;
+						padding-top: 35%;
+					}
 				}
 		}
 	}
@@ -1270,15 +1335,17 @@ html, body{
 		.custom-mix-media-player{
 			visibility: visible;
 			width: 400px;
-			padding-bottom: 40px;
+			padding-bottom: 15px;
 			background-color: RGBA(40, 40, 40, 1.00);
 			position: absolute;
-		    left: 20%;
+		    left: 22%;
 		    transform: translate(-50%,682%);
 		    display: flex;
 		    flex-direction: column;
 		    justify-content: center;
 		    align-items: center;
+		    padding-top: 1%;
+
 
 		    // .custom-mix-media-title{
 		    // 	position: absolute;

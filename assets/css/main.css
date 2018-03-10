@@ -200,6 +200,21 @@ nav {
       color: black; }
       .timeline-container .years .year:hover {
         padding-bottom: 400px; }
+      .timeline-container .years .year .year-text {
+        width: 90%;
+        margin: 0 auto;
+        color: white;
+        z-index: 1;
+        margin-top: 45%;
+        font-size: 1.2rem;
+        line-height: 2;
+        opacity: 0;
+        transition: all .8s;
+        text-align: center;
+        padding-left: 5%;
+        padding-top: 3%; }
+        .timeline-container .years .year .year-text.year-text-active {
+          opacity: 1; }
     .timeline-container .years .y1966 {
       background-color: RGBA(71, 21, 59, 1);
       background-image: url(../../assets/img/timeline-1966.png);
@@ -580,7 +595,8 @@ img {
         position: relative;
         width: 24.7%;
         padding-bottom: 40%;
-        transition: all .8s; }
+        transition: all .8s;
+        background-position: center center; }
         .timeline-container .years .year:hover {
           padding-bottom: 40%;
           transform: scale(1.2); }
@@ -592,7 +608,7 @@ img {
           .timeline-container .years .year p:hover {
             color: pink; }
       .timeline-container .years .year-active {
-        padding-right: 25%;
+        width: 100%;
         padding-bottom: 40%; }
         .timeline-container .years .year-active:hover {
           transform: scale(1); }
@@ -602,35 +618,53 @@ img {
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 1; }
+        .timeline-container .years .y1966 .year-text {
+          margin: 0 auto;
+          padding-top: 35%; }
       .timeline-container .years .y1968 {
         background-color: RGBA(97, 28, 55, 1);
         background-image: url(../../assets/img/timeline-1968-vert.png);
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 2; }
+        .timeline-container .years .y1968 .year-text {
+          margin: 0 auto;
+          padding-top: 35%; }
       .timeline-container .years .y1973 {
         background-image: url(../../assets/img/timeline-1973-vert.png);
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 3; }
+        .timeline-container .years .y1973 .year-text {
+          margin: 0 auto;
+          padding-top: 35%; }
       .timeline-container .years .y1975 {
         background-color: RGBA(161, 48, 50, 1);
         background-image: url(../../assets/img/timeline-1975-vert.png);
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 4; }
+        .timeline-container .years .y1975 .year-text {
+          margin: 0 auto;
+          padding-top: 35%; }
       .timeline-container .years .y1976 {
         background-color: RGBA(194, 80, 60, 1);
         background-image: url(../../assets/img/timeline-1976-vert.png);
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 5; }
+        .timeline-container .years .y1976 .year-text {
+          margin: 0 auto;
+          padding-top: 35%; }
       .timeline-container .years .y1980 {
         background-color: RGBA(214, 113, 61, 1);
         background-image: url(../../assets/img/timeline-1980-vert.png);
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 6; }
+        .timeline-container .years .y1980 .year-text {
+          margin: 0 auto;
+          padding-top: 35%; }
       .timeline-container .years .y1982 {
         background-color: RGBA(220, 144, 72, 1);
         background-image: url(../../assets/img/timeline-1982-vert.png);
@@ -638,12 +672,18 @@ img {
         background-size: cover;
         z-index: 7;
         background-position-x: 0px; }
+        .timeline-container .years .y1982 .year-text {
+          margin: 0 auto;
+          padding-top: 35%; }
       .timeline-container .years .y1988 {
         background-color: RGBA(224, 168, 80, 1);
         background-image: url(../../assets/img/timeline-1988-vert.png);
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 8; }
+        .timeline-container .years .y1988 .year-text {
+          margin: 0 auto;
+          padding-top: 35%; }
       .timeline-container .years .y1994 {
         background-color: RGBA(242, 202, 96, 1);
         background-image: url(../../assets/img/timeline-1994-vert.png);
@@ -651,6 +691,9 @@ img {
         background-size: cover;
         z-index: 9;
         transition: .5s all; }
+        .timeline-container .years .y1994 .year-text {
+          margin: 0 auto;
+          padding-top: 35%; }
   .timeline-container .years .y1966.year-active {
     background-image: none;
     background-color: #55003f; }
@@ -809,15 +852,16 @@ img {
     .custom-mix-container .custom-mix-media-player {
       visibility: visible;
       width: 400px;
-      padding-bottom: 40px;
+      padding-bottom: 15px;
       background-color: RGBA(40, 40, 40, 1);
       position: absolute;
-      left: 20%;
+      left: 22%;
       transform: translate(-50%, 682%);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      padding-top: 1%; }
     .custom-mix-container .download-now {
       visibility: visible;
       width: 100%;
